@@ -1,0 +1,202 @@
+<head>
+
+  <link href="/src/assets/css/templatemo_style.css" rel="stylesheet" type="text/css">
+  <style>
+
+
+   </style>
+</head>
+
+
+<app-navadmindashboard></app-navadmindashboard>
+
+<body class="color-fondo">
+
+<div class="container mt-3 mt-2 pt-5 pb-5">
+
+ <div class="d-flex p-3 bg-secondary text-white justify-content-between ">
+
+  <!---- Block flex item # 1 -left side of the view -->
+
+  <div class="d-*-flex p-5  dimensiones  ">
+
+    <div class="col-sm container-fluid pr-5 mr-5">
+      <form [formGroup]="editStaffForm"  novalidate>
+
+
+				<div class="row">
+
+            <div class="first-content text-center position-header">
+                <h3 style="color: aliceblue; font-weight: bold;"> STAFF EDIT PAGE</h3>
+            </div>
+				</div>
+        <br>
+        <br>
+
+
+				<div class="row">
+					<div class="templatemo-one-signin col-md-6">
+
+<!---------------  Name, begining block ---------------------------------------------->
+<div class="form-group">
+
+	<div class="col-ms-6">
+
+    <label for="name" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Name:</label>
+       <input type="text" class="form-control" id="name" placeholder="Eg : Sergio Rivas" formControlName="name" [class.is-invalid]="myForm['name'].invalid && (myForm['name'].dirty || myForm['name'].touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="myForm['name'].invalid && (myForm['name'].dirty || myForm['name'].touched)" class="invalid-feedback">
+       <div *ngIf="myForm['name'].errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+<!-------------- Name, end block ---------------------------------------------------------->
+<!---------------  status, begining block ---------------------------------------------->
+<div class="form-group">
+
+	<div class="col-ms-12">
+
+    <label for="status" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Status:</label>
+       <input type="text" class="form-control" id="status" placeholder="Eg : Carpenter" formControlName="status" [class.is-invalid]="myForm['status'].invalid && (myForm['status'].dirty || myForm['status'].touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="myForm['status'].invalid && (myForm['status'].dirty || myForm['status'].touched)" class="invalid-feedback">
+       <div *ngIf="myForm['status'].errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+<!-------------- status, end block ---------------------------------------------------------->
+<!---------------  age, begining block ---------------------------------------------->
+<div class="form-group">
+
+	<div class="col-ms-12">
+
+    <label for="age" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Age:</label>
+       <input type="number" class="form-control" id="status" placeholder="Eg : 20" formControlName="age" [class.is-invalid]="myForm['age'].invalid && (myForm['age'].dirty || myForm['age'].touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;" min="18" max="99">
+
+   </div>
+   <div *ngIf="myForm['age'].invalid && (myForm['age'].dirty || myForm['age'].touched)" class="invalid-feedback">
+       <div *ngIf="myForm['age'].errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+<!-------------- age, end block ---------------------------------------------------------->
+<!---------------  phoneNumber, begining block ---------------------------------------------->
+<div class="form-group">
+
+	<div class="col-ms-12">
+
+    <label for="phoneNumber" class="control-label label-width" style="color: aliceblue; font-weight: bold;">PhoneNumber:</label>
+       <input type="number" class="form-control" id="status" placeholder="Eg : 4129403149" formControlName="phoneNumber" [class.is-invalid]="myForm['phoneNumber'].invalid && (myForm['phoneNumber'].dirty || myForm['phoneNumber'].touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="myForm['phoneNumber'].invalid && (myForm['phoneNumber'].dirty || myForm['phoneNumber'].touched)" class="invalid-feedback">
+       <div *ngIf="myForm['phoneNumber'].errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+<!-------------- phoneNumber, end block ---------------------------------------------------------->
+
+<!---------------  workArea, begining block ---------------------------------------------->
+<div class="form-group">
+
+	<div class="col-ms-12">
+
+    <label for="workArea" class="control-label label-width" style="color: aliceblue; font-weight: bold;">WorkArea:</label>
+       <input type="text" class="form-control" id="workArea" placeholder="Eg : Admin" formControlName="workArea" [class.is-invalid]="myForm['workArea'].invalid && (myForm['workArea'].dirty || myForm['workArea'].touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="myForm['workArea'].invalid && (myForm['workArea'].dirty || myForm['workArea'].touched)" class="invalid-feedback">
+       <div *ngIf="myForm['workArea'].errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+<!-------------- workArea, end block ---------------------------------------------------------->
+
+<!---------------  address, begining block ---------------------------------------------->
+<div class="form-group">
+
+	<div class="col-ms-12">
+
+    <label for="Adress" class="control-label label-width" style="color: aliceblue; font-weight: bold;">address:</label>
+       <input type="text" class="form-control" id="address" placeholder="Eg : Admin" formControlName="address" [class.is-invalid]="myForm['address'].invalid && (myForm['address'].dirty || myForm['address'].touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="myForm['address'].invalid && (myForm['address'].dirty || myForm['address'].touched)" class="invalid-feedback">
+       <div *ngIf="myForm['address'].errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+<!-------------- address, end block ---------------------------------------------------------->
+<!---------------  joinDate, begining block ---------------------------------------------->
+<div class="form-group">
+
+	<div class="col-ms-12">
+
+    <label for="workArea" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Join Date:</label>
+       <input type="date" class="form-control" id="joinDate" formControlName="joinDate" [class.is-invalid]="myForm['joinDate'].invalid && (myForm['joinDate'].dirty || myForm['joinDate'].touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="myForm['joinDate'].invalid && (myForm['joinDate'].dirty || myForm['joinDate'].touched)" class="invalid-feedback">
+       <div *ngIf="myForm['joinDate'].errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+<!-------------- joinDate, end block ---------------------------------------------------------->
+
+
+
+
+
+
+<!---------------  image, begining block ---------------------------------------------->
+<div class="form-group">
+
+	<div class="col">
+
+    <label for="image" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Foto:</label>
+       <input #image type="file" class="form-control" id="image"  required style="color: rgb(1, 7, 12); font-size: 1em;" (change)="changeImg($event)" required="required">
+
+   </div>
+</div>
+<!---------------  image, end block ---------------------------------------------->
+  </div>
+
+  </div>
+  </form>
+
+  <br>
+  <br>
+  <!-- BLOCK FURNITURE------>
+  <div class="form-group">
+    <div class="col-md-6">
+      <input type="submit" value="Edit" class="btn btn-warning"
+          (click)="EditStaff(editStaffForm.value)">
+      </div>
+    </div>
+   <!--END BLOCK FURNITURE -->
+
+    </div>
+
+
+  </div> <!---- End Block flex item # 1 -left side of the view -->
+
+   <!----flex item 2 - 2do block -->
+   <div class="d-address d-md-block p-5 dimensiones text-center">
+    <h4 class="d-sm-inline text-center">{{otherparam['name']}}</h4>
+    <br>
+    <br>
+   <div class="d-*-flex flex-*-column border border-dark dimensionesCuadro2">
+
+    <img [src]="url+param" style="width:260%; height:100%;">
+   </div>
+
+
+
+   </div> <!----end flex item 2 - 2do block -->
+
+ </div>
+</div>
+
+</body>

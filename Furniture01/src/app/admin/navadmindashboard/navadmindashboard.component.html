@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-sm  bg-custom  bg-secondary navbar-dark permenencia">
+
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#">Furniture Shop - Admin Dashboard</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+
+    <!--- first menu option -->
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/homeadmin" >Home Admin<span class="sr-only">(current)</span></a>
+        </li>
+     <!--- first menu option end block -->
+     <!--- Second Menu option ----------->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Furniture</a>
+          <ul class="dropdown-menu bg-op-submenu">
+            <li><a class="dropdown-item" href="furnitureCreate">Furniture Create</a></li>
+            <li><a class="dropdown-item" href="furnitureList">Furniture List &nbsp; &nbsp; &nbsp;</a></li>
+
+          </ul>
+        </li>
+      <!--- Second Menu option end block----------->
+      <!-- Third Menu option ---------------------->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/customerList">customer List</a>
+        </li>
+
+      <!--- Third Menu option end block----------->
+      <!-- Fourth Menu option ---------------------->
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Staff</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/staffCreate">Staff Create</a></li>
+            <li><a class="dropdown-item" routerLink="/staffList">Staff List</a></li>
+
+          </ul>
+        </li>
+
+        <!-- Fourth Menu option end block ---------------------->
+        <!-- Fiveth Menu option ---------------------->
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Admin Users</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/userCreate">User Create</a></li>
+            <li><a class="dropdown-item" routerLink="/userList">User List</a></li>
+
+          </ul>
+        </li>
+
+        <!-- Fiveth Menu option end block ---------------------->
+        <!-- Third Menu option ---------------------->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Back Home</a>
+        </li>
+
+      <!--- Third Menu option end block----------->
+
+      </ul>
+    </div>
+  </div>
+</nav>

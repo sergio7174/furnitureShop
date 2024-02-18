@@ -1,0 +1,45 @@
+
+
+
+
+  <nav class="navbar navbar-expand-sm  bg-custom  bg-dark navbar-dark">
+
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">Furniture Shop</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item m-2">
+            <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link" routerLink="/furnitureListNA">Furniture List</a>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link" routerLink="/customer">customer</a>
+          </li>
+
+          <li class="nav-item m-2">
+            <a class="nav-link" routerLink="/aboutus">About US</a>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link" routerLink="/contactus">Contact US</a>
+          </li>
+          <li class="nav-item m-2">
+            <a class="nav-link" routerLink="/admincheck">Admin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div *ngIf="admin">
+
+    <h2>Admin es: {{admin}}</h2>
+  </div>

@@ -1,0 +1,143 @@
+<head>
+
+  <link href="/src/assets/css/templatemo_style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<app-navadmindashboard></app-navadmindashboard>
+
+<h3>{{url}}</h3>
+<h3>{{param}}</h3>
+<img [src]="url+param" style="width: 30%; height: 40%;">
+<body class="color-fondo">
+<br>
+<br>
+	<div class="d-flex flex-*-row">
+
+		<div class="col-md-5 container-fluid">
+      <form [formGroup]="editFurnitureForm"  novalidate>
+
+
+				<div class="row">
+
+            <div class="first-content text-center position-header">
+                <h3 style="color: aliceblue; font-weight: bold;"> FURNITURE EDIT PAGE</h3>
+            </div>
+				</div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+				<div class="row">
+					<div class="templatemo-one-signin col-md-6">
+
+<!---------------  Name, begining block ---------------------------------------------->
+<div class="form-group">
+
+	<div class="col-ms-12">
+
+    <label for="name" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Name:</label>
+       <input type="text" class="form-control" id="name" placeholder="Eg : White Chair" formControlName="name" [class.is-invalid]="myForm['name'].invalid && (myForm['name'].dirty || myForm['name'].touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="myForm['name'].invalid && (myForm['name'].dirty || myForm['name'].touched)" class="invalid-feedback">
+       <div *ngIf="myForm['name'].errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+<!-------------- Name, end block ---------------------------------------------------------->
+<!---------------  price, begining block ---------------------------------------------->
+<div class="form-group">
+
+	<div class="col-ms-12">
+
+    <label for="price" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Price:</label>
+       <input type="text" class="form-control" id="price" placeholder="Eg : 20" formControlName="price" [class.is-invalid]="myForm['price'].invalid && (myForm['price'].dirty || myForm['price'].touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="myForm['price'].invalid && (myForm['price'].dirty || myForm['price'].touched)" class="invalid-feedback">
+       <div *ngIf="myForm['price'].errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+<!-------------- price, end block ---------------------------------------------------------->
+<!---------------  discount, begining block ---------------------------------------------->
+<div class="form-group">
+
+	<div class="col-ms-12">
+
+    <label for="discount" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Discount:</label>
+       <input type="text" class="form-control" id="price" placeholder="Eg : 20" formControlName="discount" [class.is-invalid]="myForm['discount'].invalid && (myForm['discount'].dirty || myForm['discount'].touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="myForm['discount'].invalid && (myForm['discount'].dirty || myForm['discount'].touched)" class="invalid-feedback">
+       <div *ngIf="myForm['discount'].errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+<!-------------- discount, end block ---------------------------------------------------------->
+<!---------------  description, begining block ---------------------------------------------->
+<div class="form-group">
+
+	<div class="col-ms-12">
+
+    <label for="description" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Description:</label>
+       <input type="text" class="form-control" id="price" placeholder="Eg : Wood made chair" formControlName="description" [class.is-invalid]="myForm['description'].invalid && (myForm['description'].dirty || myForm['description'].touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="myForm['description'].invalid && (myForm['description'].dirty || myForm['description'].touched)" class="invalid-feedback">
+       <div *ngIf="myForm['description'].errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+<!-------------- description, end block ---------------------------------------------------------->
+
+<!---------------  image, begining block ---------------------------------------------->
+<div class="form-group">
+
+	<div class="col-ms-12">
+
+    <label for="image" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Foto:</label>
+       <input #image type="file" class="form-control" id="image" formControlName="image" [class.is-invalid]="myForm['image'].invalid && (myForm['image'].dirty || myForm['image'].touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;" (change)="changeImg($event)" required="required">
+
+   </div>
+</div>
+<!---------------  image, end block ---------------------------------------------->
+
+
+<br>
+<br>
+
+</div>
+
+
+
+            <div class="form-group">
+                <div class="col-md-6">
+				          <input type="submit" value="Edit" class="btn btn-warning"
+                      (click)="Editfurniture()">
+				          </div>
+				        </div>
+        </div>
+
+
+
+
+
+		      </form>
+		</div>
+
+    <div class="col-md-6 border border-light container-fluid">
+       <img [src]="url+param" style="width:80%; height:140%;">
+        <h2>Sergio</h2>
+
+      </div>
+
+	</div>
+  <br>
+  <br>
+  <br>
+
+</body>

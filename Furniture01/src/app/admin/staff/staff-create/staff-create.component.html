@@ -1,0 +1,179 @@
+<head>
+
+  <link href="/assets/css/templatemo_style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<app-navadmindashboard></app-navadmindashboard>
+
+
+<body class="color-fondo">
+<br>
+<br>
+	<div class="d-flex flex-*-row">
+
+		<div class="col-md-5 container-fluid">
+      <form [formGroup]="reactiveStaffForm"  novalidate>
+
+
+				<div class="row">
+
+            <div class="first-content text-center position-header">
+                <h3 style="color: rgb(230, 235, 240); font-weight: bold;"> STAFF CREATE</h3>
+            </div>
+				</div>
+        <br>
+        <br>
+        <br>
+        <br>
+				<div class="row">
+					<div class="templatemo-one-signin col-md-6">
+
+
+<div class="form-group">
+
+	<div class="col-ms-12">
+
+    <label for="name" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Name:</label>
+       <input type="text" class="form-control" id="name" placeholder="Eg : Sergio Rivas" formControlName="name" [class.is-invalid]="name.invalid && (name.dirty || name.touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback">
+       <div *ngIf="name.errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+ <div class="form-group">
+
+	<div class="col-md-12">
+
+    <label for="status" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Status:</label>
+       <input type="text" class="form-control" id="status" placeholder="Eg : Contratado" formControlName="status" [class.is-invalid]="status.invalid && (status.dirty || status.touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="status.invalid && (status.dirty || status.touched)" class="invalid-feedback">
+       <div *ngIf="status.errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+ <div class="form-group">
+
+	<div class="col-md-12">
+
+    <label for="age" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Age:</label>
+       <input type="number" class="form-control" id="age" placeholder="Eg : 20" formControlName="age" [class.is-invalid]="age.invalid && (age.dirty || age.touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;" min="18" max="99">
+
+   </div>
+   <div *ngIf="age.invalid && (age.dirty || age.touched)" class="invalid-feedback">
+       <div *ngIf="age.errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+ <div class="form-group">
+
+  <div class="col-md-12">
+
+    <label for="phoneNumber" class="control-label label-width" style="color: aliceblue; font-weight: bold;">PhoneNumber:</label>
+       <input type="number" class="form-control" id="phoneNumber" placeholder="Eg : 4129403149" formControlName="phoneNumber" [class.is-invalid]="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)" class="invalid-feedback">
+       <div *ngIf="phoneNumber.errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+ <div class="form-group">
+
+  <div class="col-md-12">
+
+    <label for="workArea" class="control-label label-width" style="color: aliceblue; font-weight: bold;">WorkArea:</label>
+       <input type="text" class="form-control" id="workArea" placeholder="Eg : Carpenter 01" formControlName="workArea" [class.is-invalid]="workArea.invalid && (workArea.dirty || workArea.touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="workArea.invalid && (workArea.dirty || workArea.touched)" class="invalid-feedback">
+       <div *ngIf="workArea.errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+ <div class="form-group">
+
+  <div class="col-md-12">
+
+    <label for="address" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Address:</label>
+       <input type="address" class="form-control" id="address" placeholder="Eg : La Entrada" formControlName="address" [class.is-invalid]="address.invalid && (address.dirty || address.touched)"  style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="address.invalid && (address.dirty || address.touched)" class="invalid-feedback">
+       <div *ngIf="address.errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+ <div class="form-group">
+
+  <div class="col-md-12">
+
+    <label for="JoinDate" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Join Date:</label>
+       <input type="date" class="form-control" id="joinDate" formControlName="joinDate" [class.is-invalid]="joinDate.invalid && (joinDate.dirty || joinDate.touched)"  style="color: rgb(1, 7, 12); font-size: 1em;" placeholder="Eg : 2022/12/31">
+
+   </div>
+   <div *ngIf="joinDate.invalid && (joinDate.dirty || joinDate.touched)" class="invalid-feedback">
+       <div *ngIf="joinDate.errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+ <div class="form-group">
+  <div class="col-ms-12">
+
+    <label for="image" class="control-label" style="color: aliceblue; font-weight: bold;">Add Staff Picture:</label>
+
+       <input #image type="file"  class="form-control " name="myfile" accept="image/*"  formControlName="image" (change)="changeImg($event)" multiple required="required" [class.is-invalid]="image.invalid && (image.dirty || image.touched)"/>
+    <span class="file-custom" ></span>
+    <div *ngIf="image.invalid && (image.dirty || image.touched)" class="invalid-feedback">
+    <div *ngIf="image.errors?.['required']">This field is required.</div>
+    </div>
+
+  </div>
+
+ </div>
+
+<br>
+<br>
+
+</div>
+
+
+				        <div class="form-group">
+				          <div class="col-md-12">
+				            <input type="submit" value="Create" class="btn btn-warning"
+                      (click)="AddStaff(reactiveStaffForm.value)">
+                      &nbsp; &nbsp; &nbsp;
+                      <input type="submit" value="Back" class="btn btn-warning"
+                        (click)="back()">
+				          </div>
+				        </div>
+
+					</div>
+
+
+
+
+		      </form>
+		</div>
+
+      <div class="col-md-6 border border-light container-fluid d-none d-sm-block">
+        <br>
+        <br>
+        <img src="/assets/Images/personas 02.jpg" style="width: 100%; height: 90%;">
+
+
+      </div>
+
+	</div>
+  <br>
+  <br>
+  <br>
+
+ 
+ <br>
+</body>

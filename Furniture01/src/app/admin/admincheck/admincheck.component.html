@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+
+  <div class="container text-center">
+      <div class="first-content">
+          <h1> Admin Check</h1>
+          <span><em>SERGIO (PVT)</em></span>
+
+      </div>
+  </div>
+
+
+
+
+
+
+<div class="parallax-content contact-content" id="contact-us">
+  <div class="container">
+      <div class="row">
+      <!--   <div class="col-md-6"> -->
+              <div class="Admincheck-form">
+
+
+                    <form id="contact" action="" [formGroup]="admincheckForm">
+
+
+                          <div class="row">
+                            <div class="d-flex  justify-content-center m-0 p-0">
+
+                            <div class="col-md-3">
+                               <fieldset>
+                                  <input  type="text" class="form-control"  placeholder="Please Enter Your Admin Password..."  [value]="clave"
+                                   (input)="clave = test.value" #test required />
+                                </fieldset>
+                              </div>
+
+                              <div class="col-md-2">
+                                <fieldset>
+                                  <button  id="form-submit" class="btn" (click)="admincheck($event)" >Check Admin</button>
+                                </fieldset>
+                              </div>
+
+                            </div>
+                </div>
+                      </form>
+                          </div>
+                              </div>
+                                 </div>
+      </div>
+
+<router-outlet></router-outlet>
+
+

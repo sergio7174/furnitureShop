@@ -1,0 +1,19 @@
+div.card{
+  background-color : rgb(3, 42, 56);
+  border-radius: 10px;
+  margin: 15px;
+  font-weight: 100;
+  z-index: 1 !important;
+  width: 60%;
+
+}
+
+.color-fondo {background-color : rgb(3, 42, 56);}
+/*.position-header {margin-top: -1.8em;}
+.position-body {padding-bottom: 1em;}
+
+.visual-index{
+              z-index: -1 !important;}*/
+
+
+.form-control{min-width: 35vw !important;}

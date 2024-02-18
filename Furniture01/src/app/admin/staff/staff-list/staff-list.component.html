@@ -1,0 +1,76 @@
+<app-navadmindashboard></app-navadmindashboard>
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+</head>
+
+<body class="color-fondo">
+  <br>
+
+          <table class="table table-bordered table-secondary table-hover text-center table-responsive-sm mt-5">
+              <thead class="table-dark border-light">
+                  <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Photo</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Age</th>
+                      <th scope="col">Phone #</th>
+                      <th scope="col">Work Area</th>
+                      <th scope="col">Adress</th>
+
+                      <th scope="col">Join Date</th>
+                      <th scope="col">Edit/delete</th>
+                      <!--<th scope="col"></th>-->
+
+
+                  </tr>
+              </thead>
+              <tbody class="border-dark">
+                <tr *ngFor="let element of dataSource;let row = index;" >
+
+
+                      <td>{{row+1}}</td>
+
+                     <!-- <td>{{element?._id ? element?._id :'not set'}}</td> -->
+                      <td><img [src]= 'url + element.image' width="50vmax" height="60vmax"></td>
+
+                      <td>{{element?.name ? element?.name :'not set'}}</td>
+                      <td>{{element?.status ? element?.status :'not set'}}</td>
+                      <td>{{element?.age ? element?.age :'not set'}}</td>
+                      <td>{{element?.phoneNumber? element?.phoneNumber:'not set'}}</td>
+                      <td>{{element?.workArea ? element?.workArea :'not set'}}</td>
+                      <td>{{element?.address ? element?.address :'not set'}}</td>
+                      <td>{{element?.joinDate ? element?.joinDate :'not set'}}</td>
+
+
+                     <td><button class="btn btn-sm btn-primary"><i class="bi bi-pencil-square" (click)= "editDetails(element._id)" ></i></button>
+                      <button class="btn btn-sm btn-danger" ><span (click)="deleteDetails(element,row,$event)"><i class="bi bi-trash3-fill" ></i></span></button></td>
+
+
+
+
+                  </tr>
+
+
+              </tbody>
+          </table>
+<br>
+<br>
+<br>
+<!-- BLOCK back------>
+<div class="form-group">
+  <div class="col-md-6">
+    <input type="submit" value="Back" class="btn btn-warning"
+        (click)="back()">
+    </div>
+  </div>
+ <!--END BLOCK BACK -->
+<br>
+<br>
+<br>
+
+
+</body>

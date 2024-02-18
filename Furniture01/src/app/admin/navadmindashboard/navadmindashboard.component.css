@@ -1,0 +1,12 @@
+.activo {
+  background-color: #ccc;
+}
+.activo a {
+  color: green;
+}
+
+
+/**background color of each sub-menu option **/
+.bg-op-submenu {background-color: darkgrey;}
+.bg-op-submenu:hover {min-width: 100% !important;}
+

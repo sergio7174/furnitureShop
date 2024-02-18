@@ -1,0 +1,171 @@
+<head>
+
+  <link href="/assets/css/templatemo_style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<app-navadmindashboard></app-navadmindashboard>
+
+
+
+<body class="color-fondo">
+<br>
+<br>
+	<div class="d-flex flex-*-row">
+
+		<div class="col-md-5 container-fluid">
+      <form [formGroup]="reactiveFurnitureForm"  novalidate>
+
+
+				<div class="row">
+
+            <div class="first-content text-center position-header">
+                <h3 style="color: aliceblue; font-weight: bold;"> FURNITURE CREATE</h3>
+            </div>
+				</div>
+        <br>
+        <br>
+        <br>
+        <br>
+				<div class="row">
+					<div class="templatemo-one-signin col-md-6">
+
+
+<div class="form-group">
+
+	<div class="col-ms-12">
+
+    <label for="name" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Name:</label>
+       <input type="text" class="form-control" id="name" placeholder="Eg : White Chair" formControlName="name" [class.is-invalid]="name.invalid && (name.dirty || name.touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback">
+       <div *ngIf="name.errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+ <div class="form-group">
+
+	<div class="col-md-12">
+
+    <label for="price" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Price:</label>
+       <input type="number" class="form-control" id="price" placeholder="Eg : 100" formControlName="price" [class.is-invalid]="price.invalid && (price.dirty || price.touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="price.invalid && (price.dirty || price.touched)" class="invalid-feedback">
+       <div *ngIf="price.errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+ <div class="form-group">
+
+	<div class="col-md-12">
+
+    <label for="discount" class="control-label label-width" style="color: aliceblue; font-weight: bold;">Discount:</label>
+       <input type="text" class="form-control" id="discount" placeholder="Eg : 10" formControlName="discount" [class.is-invalid]="discount.invalid && (discount.dirty || discount.touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="discount.invalid && (discount.dirty || discount.touched)" class="invalid-feedback">
+       <div *ngIf="discount.errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+ <div class="form-group">
+
+  <div class="col-md-12">
+
+    <label for="color" class="control-label label-width" style="color: aliceblue; font-weight: bold;">color:</label>
+       <input type="text" class="form-control" id="color" placeholder="Eg : Marron" formControlName="color" [class.is-invalid]="color.invalid && (color.dirty || color.touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="color.invalid && (color.dirty || color.touched)" class="invalid-feedback">
+       <div *ngIf="color.errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+ <div class="form-group">
+
+  <div class="col-md-12">
+
+    <label for="avalibleCount" class="control-label label-width" style="color: aliceblue; font-weight: bold;">avalibleCount:</label>
+       <input type="number" class="form-control" id="avalibleCount" placeholder="Eg : 10" formControlName="avalibleCount" [class.is-invalid]="avalibleCount.invalid && (avalibleCount.dirty || avalibleCount.touched)"  required style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="avalibleCount.invalid && (avalibleCount.dirty || avalibleCount.touched)" class="invalid-feedback">
+       <div *ngIf="avalibleCount.errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+ <div class="form-group">
+
+  <div class="col-md-12">
+
+    <label for="description" class="control-label label-width" style="color: aliceblue; font-weight: bold;">description:</label>
+       <input type="description" class="form-control" id="description" placeholder="Eg : 100" formControlName="description" [class.is-invalid]="description.invalid && (description.dirty || description.touched)"  style="color: rgb(1, 7, 12); font-size: 1em;">
+
+   </div>
+   <div *ngIf="description.invalid && (description.dirty || description.touched)" class="invalid-feedback">
+       <div *ngIf="description.errors?.['required']">This field is required.</div>
+   </div>
+ </div>
+
+ <div class="form-group">
+
+  <div class="col-ms-12">
+
+    <label for="image" class="control-label" style="color: aliceblue; font-weight: bold;">Add Forniture Picture:</label>
+
+       <input #image type="file"  class="form-control " name="myfile" accept="image/*"  formControlName="image" (change)="changeImg($event)" multiple required="required" [class.is-invalid]="image.invalid && (image.dirty || image.touched)"/>
+    <span class="file-custom" ></span>
+    <div *ngIf="description.invalid && (description.dirty || description.touched)" class="invalid-feedback">
+    <div *ngIf="image.errors?.['required']">This field is required.</div>
+    </div>
+
+  </div>
+
+ </div>
+
+<br>
+<br>
+
+</div>
+
+
+				        <div class="form-group">
+				          <div class="col-md-12">
+				            <input type="submit" value="Create" class="btn btn-warning"
+                      (click)="AddFurniture(reactiveFurnitureForm.value)">
+                      &nbsp; &nbsp; &nbsp;
+                      <input type="submit" value="Back" class="btn btn-warning"
+                        (click)="back()">
+				          </div>
+
+
+				        </div>
+
+					</div>
+
+
+
+
+		      </form>
+		</div>
+
+      <div class="col-md-6 border border-light container-fluid d-none d-sm-block">
+        <br>
+        <br>
+        <img src="/assets/Images/fab_muebles01.jpg" style="width: 100%; height: 90%;">
+
+
+      </div>
+
+	</div>
+  <br>
+  <br>
+  <br>
+
+ <br>
+ <br>
+ <br>
+</body>
