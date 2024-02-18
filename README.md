@@ -74,7 +74,7 @@ $ npm start (to start the server), or nodemon server
 ##  Key Features:
 
 - Admin Area
-- Add/Edit/Delete Products and Users, Staff
+- Add/Edit/Delete Products, Users and Staff.
 - User Authenication
 - Admin  Authenication
 - See Product List
