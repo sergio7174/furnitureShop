@@ -73,9 +73,11 @@ $ npm start (to start the server), or nodemon server
 
 ##  Key Features:
 
-- Reservations
-- See Drinks Galleries
-- Get Contacts
+- Admin Area
+- Add/Edit/Delete Products and Users, Staff
+- User Authenication
+- Admin  Authenication
+- See Product List
 
 
 ##  Technologies used
